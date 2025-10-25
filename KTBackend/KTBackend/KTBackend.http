@@ -1,0 +1,6 @@
+@KTBackend_HostAddress = http://localhost:5211
+
+GET {{KTBackend_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
