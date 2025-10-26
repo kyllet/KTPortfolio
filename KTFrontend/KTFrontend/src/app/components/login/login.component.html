@@ -1,0 +1,40 @@
+<div class="login-container">
+  <p-card header="Login" [style]="{ width: '400px' }">
+    <form [formGroup]="form" (submit)="submit()">
+      <div class="field">
+        <label for="email">Email</label>
+        <input
+          type="text"
+          pInputText
+          [formControl]="form.controls.email"
+          class="w-full"
+        />
+      </div>
+      <div class="field">
+        <label for="password">Passoword</label>
+        <!-- <input
+          type="text"
+          pInputText
+          [formControl]="form.controls.password"
+          class="w-full"
+        /> -->
+
+        <p-password
+          [formControl]="form.controls.password"
+          [toggleMask]="true"
+          [feedback]="false"
+          class="w-full"
+        />
+      </div>
+
+      <div style="margin-top: 1rem">
+        <p-button
+          [disabled]="form.invalid"
+          label="Submit"
+          class="p-button p-component w-full"
+          type="submit"
+        />
+      </div>
+    </form>
+  </p-card>
+</div>
